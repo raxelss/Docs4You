@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Enkät</title>
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="forms.css">
+</head>
+<body>
+	<h1 id="title">Dryckesspels-app</h1>
+	<p id="description">Fyll i denna enkät,<sup></sup> så vi kan göra appen bättre <span class="desc-foot"><sub><sup></sup>TACK<sub></span></p>
+	<form method="POST" action="https://formspree.io/" id="survey-form">
+		<div>
+			<label for="name" id="name-label">Namn:</label><br>
+			<input class="input-elm" type="text" name="name" id="name" required placeholder="Namn">
+		</div>
+		
+		<div>
+			<label for="number" id="number-label">Ålder:</label><br>
+			<input class="input-elm" type="number" name="age" id="number" max="40" min="18" placeholder="Din Ålder">
+		</div>
+		<div>
+			<label for="dropdown">Hur stor chans skulle det vara att du skulle ladda ner appen?</label><br>
+			<select class="select-elm" name="occupation" id="dropdown">
+				<option value="full_time_job">Jag kommer</option>
+				<option value="part_time_job">Stor chans</option>
+				<option value="freelancer">Kanske</option>
+				<option value="teacher">Liten chans</option>
+				<option value="student">Kommer inte</option>
+				<option value="no_say">Prefer not to say</option>
+			</select>
+		</div>
+		<div>
+			<div>Skulle du kört appen med dina vänner?</div>
+			<ul>
+				<li class="list-items"><input class="input-elm input-radio" type="radio" name="likely" value="1" id="radio-1"> <label for="radio-1">Ja 100%</label></li>
+				<li class="list-items"><input class="input-elm input-radio" type="radio" name="likely" value="2" id="radio-2"> <label for="radio-2">Ja men kanske det</label></li>
+				<li class="list-items"><input class="input-elm input-radio" type="radio" name="likely" value="3" id="radio-3"> <label for="radio-3">Nja</label></li>
+				<li class="list-items"><input class="input-elm input-radio" type="radio" name="likely" value="4" id="radio-4"> <label for="radio-4">Nej</label></li>
+			</ul>
+		</div>
+		<div>
+			<div>Tycker du att dryckesspels-appar just nu är bra?</div>
+			<ul>
+				<li class="list-items"><input class="input-elm input-checkbox" type="checkbox" name="improvements" value="html5" id="checkbox-1"> <label for="checkbox-1">Ja</label></li>
+				<li class="list-items"><input class="input-elm input-checkbox" type="checkbox" name="improvements" value="css3" id="checkbox-2"> <label for="checkbox-2">Hyfsat</label></li>
+				<li class="list-items"><input class="input-elm input-checkbox" type="checkbox" name="improvements" value="js" id="checkbox-3"> <label for="checkbox-1">Nej</label></li>
+			</ul>
+		</div>
+		<div>
+			<label for="more-improvements">List out all improvements you want to see in freeCodeCamp:</label>
+			<textarea class="textarea-elm" name="improvements-list" id="more-improvements"></textarea>
+		</div>
+		<button class="button-elm" type="submit" id="submit">Submit Form</button>
+	</form>
+</body>
+</html>
+
+
+
